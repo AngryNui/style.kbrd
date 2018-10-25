@@ -1,0 +1,38 @@
+{
+  "name": "style.kbrd",
+  "version": "0.0.1",
+  "repository": "https://github.com/AngryNui/style.qbrd",
+  "description": "yo",
+  "main": "",
+  "author": "Hannes Liehr",
+  "license": "ISC",
+  "watch": {
+    "build:html": {
+      "patterns": [
+        "build"
+      ],
+      "extensions": "pug",
+      "quiet": true
+    },
+    "build:css": {
+      "patterns": [
+        "build"
+      ],
+      "extensions": "scss",
+      "quiet": true
+    }
+  },
+  "scripts": {
+    "build:html": "pug ./build/index.pug -o ./app/",
+    "build:css": "node-sass ./build/style.scss ./app/style.css",
+    "bs": "browser-sync app --files='*.css,*.html,*.js' -w",
+    "start": "concurrently  --names \"pug,scss,browsersync\" -c \"red,magenta,green\" \"npm-watch build:html\" \"npm-watch build:css\" \"npm run build:css && npm run build:html && npm run bs\""
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "concurrently": "^4.0.1",
+    "node-sass": "^4.9.4",
+    "npm-watch": "^0.4.0",
+    "pug-cli": "^1.0.0-alpha6"
+  }
+}
