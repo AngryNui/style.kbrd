@@ -20,11 +20,19 @@
       ],
       "extensions": "scss",
       "quiet": true
+    },
+    "build:js": {
+      "patterns": [
+        "build"
+      ],
+      "extensions": "js",
+      "quiet": true
     }
   },
   "scripts": {
     "build:html": "pug ./build/index.pug -o ./app/",
     "build:css": "node-sass ./build/style.scss ./app/style.css",
+    "build:js": "uglifyjs build/main.js -o app/main.min.js",
     "bs": "browser-sync app --files='*.css,*.html,*.js' -w",
     "start": "concurrently  --names \"pug,scss,browsersync\" -c \"red,magenta,green\" \"npm-watch build:html\" \"npm-watch build:css\" \"npm run build:css && npm run build:html && npm run bs\""
   },
@@ -33,6 +41,7 @@
     "concurrently": "^4.0.1",
     "node-sass": "^4.9.4",
     "npm-watch": "^0.4.0",
-    "pug-cli": "^1.0.0-alpha6"
+    "pug-cli": "^1.0.0-alpha6",
+    "uglify-js": "^3.4.9"
   }
 }

@@ -1,0 +1,21 @@
+$sidebarColor:gray;
+$contentColor: rgba(220,220,220,1);
+
+#sidebar {
+  background-color: $sidebarColor;
+  position: absolute;
+  right: 0;
+  width: 350px;
+  z-index: 2;
+}
+#content {
+
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
