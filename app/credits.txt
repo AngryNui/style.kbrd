@@ -1,0 +1,2 @@
+dsa keycaps -> https://www.reddit.com/r/MechanicalKeyboards/comments/5yzsaz/dsa_keycap_i_modeled_print_files_available_in/
+cherry profile keycaps -> https://github.com/ConstantinoSchillebeeckx/cherry-mx-keycaps
