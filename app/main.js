@@ -1,5 +1,5 @@
 //pcb's
-var gh={
+/*var gh={
     "name":"GK64",
     "rows":[
         {
@@ -42,7 +42,7 @@ var gh={
         1:"r2[2]:r3[1]"
     }]   
 }
-
+*/
 var controls, camera, scene, renderer, loader;
 var cube, line, light, light1, light2;
 
@@ -90,7 +90,7 @@ function init(){
 
     //external models
     loader = new THREE.GLTFLoader();
-    loader.load('/models/BoomBox/glTF/BoomBox.gltf', function ( gltf ) {
+    loader.load('/static/models/BoomBox/glTF/BoomBox.gltf', function ( gltf ) {
             gltf.scene.scale.set(100,100,100);
             gltf.scene.position.set(0,0,0);
             gltf.scene.rotateY(-Math.PI/2);
