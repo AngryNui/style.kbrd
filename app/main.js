@@ -51,9 +51,12 @@ init();
 animate();
 
 function init(){
+    document.addEventListener("DOMContentLoaded", function(){
+        websiteStuff();
+    });
     //Screne & Renderer
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xcccccc);
+    scene.background = new THREE.Color(0xEEEEEE);
     renderer = new THREE.WebGLRenderer( { antialias: true } );
     renderer.setPixelRatio( window.devicePixelRatio );
     renderer.setSize( window.innerWidth, window.innerHeight );
@@ -133,6 +136,16 @@ function build60r2() {
 
 }
 
+function websiteStuff(){
+    //todo sidebar eine aktive klasse geben und diese toggeln + variable Breite!
+    document.getElementById('sidebar').addEventListener('click',  function(){
+        if (this.style.right === '0px') {
+            this.style.right = '-320px';
+        } else {
+            this.style.right = '0px';
+        }
+    })
+}
 
 /*
 //cube
